@@ -2,9 +2,6 @@ Allows for a <a href="https://github.com/hakimel/reveal.js/">reveal.js</a> prese
 
 Go <a href="https://christopherchubb.com/manim_slides">here</a> for a live demonstration of it working.
 
-Manim code is put into <code>./talk.py</code>, and the corresponding slides need to be put into <code>./index.html</code>. To compile the manim videos for slide X run:
-    manimce talk.py X
+Manim code is put into <code>./talk.py</code>, and the corresponding slides need to be put into <code>./index.html</code>. To compile the manim videos for slide X run <code>manimce talk.py X</code>.
 
-To view a local copy you must run
-    npm start
-on the local copy.
+To view a local copy you must run <code>npm start</code> on the local copy.
