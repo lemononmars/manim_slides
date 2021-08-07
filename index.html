@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
+		<!-- link rel="stylesheet" href="plugin/toc-progress/toc-progress.css"-->
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -17,15 +18,24 @@
 		<div class="reveal">
 			<div class="slides">
 				<script src="js/add_video_slide.js" slide_scene="Title"></script>
-				<script src="js/add_video_slide.js" slide_scene="ExampleSlide"></script>
+				<script src="js/add_video_slide.js" slide_scene="FareyIntro"></script>
+				<section>
+					<script data-quiz src="/quizzes/quiz1.js"></script>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						`\[ J(\theta_0,\theta_1) = \sum_{i=0} \]`
+					</textarea>
+				 </section>
 			</div>
 		</div>
 
-
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="node_modules/reveal.js-menu/menu.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -36,7 +46,36 @@
 				progress: false,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu, RevealMath],
+
+				menu:{
+					numbers: true
+				},
+				math: {
+					mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					// pass other options into `MathJax.Hub.Config()`
+					TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				dependencies:[
+					{
+						src: 'plugin/toc-progress/toc-progress.js',
+						async: true,
+						callback: function()
+						{
+							//toc_progress.initialize();
+							//toc_progress.create();
+						}
+					},
+					{ 
+						src: 'plugin/quiz/js/quiz.js', 
+						async: true, 
+						callback: function() 
+						{
+							prepareQuizzes({}); 
+						} 
+					}
+				]
 			});
 		</script>
 		<script src="js/video_slide.js"></script>
