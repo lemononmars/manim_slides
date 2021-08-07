@@ -4,19 +4,25 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Title</title>
+		<title>ทดสอบ reveal.js + Manim</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
-		<!-- link rel="stylesheet" href="plugin/toc-progress/toc-progress.css"-->
+		<!--link rel="stylesheet" href="plugin/toc-progress/toc-progress.css"-->
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
 	<body>
+		<!-------------------- begin reveal -->
 		<div class="reveal">
 			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+						`\[ e^{i\pi} = 1 \]`
+					</textarea>
+				</section>
 				<script src="js/add_video_slide.js" slide_scene="Title"></script>
 				<script src="js/add_video_slide.js" slide_scene="FareyIntro"></script>
 				<section>
@@ -29,6 +35,7 @@
 				 </section>
 			</div>
 		</div>
+		<!------------------------- end reveal -->
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
@@ -57,16 +64,16 @@
 					// pass other options into `MathJax.Hub.Config()`
 					TeX: { Macros: { RR: "{\\bf R}" } }
 				},
-				dependencies:[
+				dependencies:[/*
 					{
 						src: 'plugin/toc-progress/toc-progress.js',
 						async: true,
 						callback: function()
 						{
-							//toc_progress.initialize();
-							//toc_progress.create();
+							toc_progress.initialize();
+							toc_progress.create();
 						}
-					},
+					},*/
 					{ 
 						src: 'plugin/quiz/js/quiz.js', 
 						async: true, 
