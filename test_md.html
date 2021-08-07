@@ -9,7 +9,6 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
-		<!--link rel="stylesheet" href="plugin/toc-progress/toc-progress.css"-->
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -56,26 +55,6 @@
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu, RevealMath],
-
-				menu:{
-					numbers: true
-				},
-				math: {
-					mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
-					config: 'TeX-AMS_HTML-full',
-					// pass other options into `MathJax.Hub.Config()`
-					TeX: { Macros: { RR: "{\\bf R}" } }
-				},
-				dependencies:[
-					{ 
-						src: 'plugin/quiz/js/quiz.js', 
-						async: true, 
-						callback: function() 
-						{
-							prepareQuizzes({}); 
-						} 
-					}
-				]
 			});
 		</script>
 	</body>

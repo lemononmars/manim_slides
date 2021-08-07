@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>ทดสอบแบบไม่มี plugin manim</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<!-------------------- begin reveal -->
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>สมการสวย ๆ</h1>
+					\[
+					x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+					\]
+				</section>
+				<section>
+					<h1>ภาษาไทย</h1>
+					นางเงือกน้ำกำสรดสลดจิต
+				</section>
+				<section>
+					<h1>โค้ดสวย ๆ</h1>
+					<pre><code data-trim data-noescape data-line-numbers = "1-2|3|4">
+					circle = Circle(2);
+					circle.set(color = ORANGE);
+					self.play(Create(circle), run_time = 3);
+					self.wait(1);
+					</code></pre>
+				 </section>
+			</div>
+		</div>
+		<!------------------------- end reveal -->
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="node_modules/reveal.js-menu/menu.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: false,
+				transition: 'none',
+				progress: false,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu, RevealMath],
+			});
+		</script>
+	</body>
+</html>
