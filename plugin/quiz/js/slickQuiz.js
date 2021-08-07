@@ -18,7 +18,7 @@
             _element = '#' + $element.attr('id'),
 
             defaults = {
-                checkAnswerText:  'Check My Answer!',
+                checkAnswerText:  'Submit',
                 nextQuestionText: 'Next &raquo;',
                 backButtonText: 'Back',
                 completeQuizText: '',
@@ -259,7 +259,7 @@
                         }
 
                         // Now let's append the answers with checkboxes or radios depending on truth count
-                        var answerHTML = $('<ul class="' + answersClass + '"></ul>');
+                        var answerHTML = $('<ul class="' + answersClass + '" display = "inline"></ul>');
 
                         // Get the answers
                         var answers = plugin.config.randomSortAnswers ?

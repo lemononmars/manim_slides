@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="dist/theme/black.css">
 		<!--link rel="stylesheet" href="plugin/toc-progress/toc-progress.css"-->
 
-		<!-- Theme used for syntax highlighted code -->
+		<!-- Theme used for syntax highlighted code --> 
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
 	<body>
@@ -20,19 +20,26 @@
 			<div class="slides">
 				<section data-markdown>
 					<textarea data-template>
+						# สมการคณิตศาสตร์
 						`\[ e^{i\pi} = 1 \]`
 					</textarea>
 				</section>
-				<script src="js/add_video_slide.js" slide_scene="Title"></script>
-				<script src="js/add_video_slide.js" slide_scene="FareyIntro"></script>
 				<section>
-					<script data-quiz src="/quizzes/quiz1.js"></script>
+					<script data-quiz src="quizzes/quiz1.js"></script>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						`\[ J(\theta_0,\theta_1) = \sum_{i=0} \]`
+						## สมการกำลังสอง
+						`
+						\begin{align*}
+							m+n &= 6\\
+							mn &= 8
+						\end{align*}
+						`
 					</textarea>
 				 </section>
+				 <script src="js/add_video_slide.js" slide_scene="Title"></script>
+				 <script src="js/add_video_slide.js" slide_scene="FareyIntro"></script>
 			</div>
 		</div>
 		<!------------------------- end reveal -->
@@ -57,12 +64,6 @@
 
 				menu:{
 					numbers: true
-				},
-				math: {
-					mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
-					config: 'TeX-AMS_HTML-full',
-					// pass other options into `MathJax.Hub.Config()`
-					TeX: { Macros: { RR: "{\\bf R}" } }
 				},
 				dependencies:[/*
 					{
