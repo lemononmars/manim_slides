@@ -1,7 +1,7 @@
-Manim slides
-================
+# Manim slides
 
-A collection of reveal.js slides with Manim animation. Some examples are here:
+A collection of reveal.js slides with Manim animation. Main depo is forked from [chubbc](https://github.com/chubbc/manim_slides)
+Some examples are here:
 
 [Demo](/test.html)
 
